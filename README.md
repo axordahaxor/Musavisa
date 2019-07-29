@@ -1,3 +1,9 @@
+Huomioita:
+--------------------------------------------
+- Peli tarvitsee Youtube api V3 keyn toimiakseen. Se tulee lisätä koodiin Questions.js tiedostossa. 
+- Pelissä näkyy Youtuben video, mikä heikentää pelikokemusta. Videon piilotukseen on olemassa erilaisia vaihtoehtoja, mutta ilmeisesti Youtuben käyttöehdot kieltävät piilotuksen. Siksi oletuksena video näkyy, vaikka teknisesti videon piilotus ei vaikeaa olekaan. 
+- Pistelaskua ei ole vielä kehitetty. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
