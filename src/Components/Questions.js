@@ -9,7 +9,7 @@ class F extends React.Component {
     }
 }
 /*
-async () =>(props) {
+async wait = (props) => {
 
   let promise = new Promise((resolve, reject) => {
     if (props.esittäjä + props.kappale > 0) {
@@ -18,15 +18,17 @@ async () =>(props) {
   });
 
   let result = await promise;
-  console.log(result);
-}
+
+  resolve({promise});
 wait();
 */
+
 fetchaus = (props) => {
   let result;
   let i = props.biisinnumero;
   let value = props.esittäjä[i] + "+" + props.kappale[i];
-   const API_KEY = "AIzaSyAKOfGS9Vr4Y56piBPWIWzS4p9i3iTKIP4";
+  //API_KEY:n kohdalle tarvitaan Youtubeapin key, jotta kappaleita voidaan hakea Youtubesta. 
+   const API_KEY = "";
    const ROOT_URL_REQUEST = "https://www.googleapis.com/youtube/v3/search/?&part=snippet&key=";
    const ROOT_URL_EMBED = "https://www.youtube.com/embed";
 
@@ -50,7 +52,7 @@ componentWillReceiveProps(nextProps) {
   this.fetchaus(nextProps);
 }
 // Iframe, jossa playerin tiedot ja joitain määrityksiä. Yksi tapa peittää video näkymästä ja tehdä pelistä mielenkiintoisempaa
-// on käyttää style={{width:0,height:0,border:0,}}, jolloin video peittyy näkyvistä. Se ei kuitenkaan ole Youtube APIn käyttöehtojen mukaista.
+// on käyttää style={{width:0,height:0,border:0,}}, jolloin video peittyy näkyvistä. Se ei kuitenkaan taida olla Youtube APIn käyttöehtojen mukaista.
 render() {
   return <iframe id="youtube_player" title="youtube" className="iframe" width="320" height="240" src={this.state.biisi1}  allowFullScreen={false} allowscriptaccess="always" frameBorder="1"></iframe>;
 }
