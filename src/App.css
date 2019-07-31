@@ -2,6 +2,7 @@
 margin: 0;
 padding: 0;
 }
+
 .App {
   background-image: url("audience.jpg");
   background-position: center;
@@ -35,10 +36,3 @@ padding: 0;
   width: 30vw;  
   height: 30vh;
 }
-/*
-taustakuvaksi joku kuva missä on pimeä kaupunki ja erivärisiä punaisia ym valoja, jotka sitten blurrataan
-siihen päälle tulevalla css blurrilla. pelin tekstit/napit tms. tulee rolleina ulkopuolelta esim vasen oikea
-vasen siihen keskelle ruutua, jää vilkkumaan napeiksi niinku arcadepeleissä. Joku punainen teksti tai ainakin
-teksti punaisilla reunuksilla tms. Aina kun jotain painetaan niin ääniefekti, esim "alright!" ja kun peli alkaa
-niin "3...2....1..." ja oikeista vastauksista "yeah!" ja vääristä "ohhh no!" tai jotain vastaavaa. Voittoruudussa
-"Winner!" tai jotain. */

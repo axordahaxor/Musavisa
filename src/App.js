@@ -5,7 +5,6 @@ import ChooseGamers from './Components/ChooseGamers'
 import {GetSongs} from './Components/ChooseGenre';
 import F from './Components/Questions';
 import Pelaajat from './Components/ChooseGamers';
-import Button from 'react-bootstrap/Button';
 import Buttongroup from 'react-bootstrap/ButtonGroup';
 import swal from 'sweetalert';
 
@@ -26,7 +25,6 @@ class App extends React.Component {
     otsikko: 1,
     pelaajannumero: 1,
     pelaajataulukko: "",
-    testi: [],
     }
     }
 
@@ -74,17 +72,12 @@ class App extends React.Component {
         //pieniin kirjaimiin, jotta vastaaminen helpottuu.
     handleClickkaus = (event) => {
       let i = this.state.otsikko;
-      let pisteytys = [];
-      let p = 0;
   let tarkistus = this.state.vastaus + this.state.vastaus1;
   tarkistus = tarkistus.toLowerCase();
   let tarkistus1 = this.state.esittäjä[i] + this.state.kappale[i];
   tarkistus1 = tarkistus1.toLowerCase();
   if (tarkistus === tarkistus1) {
     swal ("Oikein!", "hienoa työtä, jatka samaan malliin.", "success");
-    let i = this.state.otsikko;
-    let pisteytys = [];
-    pisteytys[i].push(tarkistus1);
 
     }
     else {
@@ -99,7 +92,6 @@ class App extends React.Component {
       }
     setTimeout(clearaus, 10000);
   }
-  console.log(pisteytys);
   }
 
   laskuri = (props) => {
@@ -132,7 +124,7 @@ class App extends React.Component {
         <br></br>
         <br></br>
         <Buttongroup><ChooseGamers handleOnClick={this.Pelurit}/> </Buttongroup>
-        <Buttongroup><MakeButtons Kategoriat={this.state.Kategoriat}data={this.state.ChooseGenre} handleOnClick={this.saveName}/></Buttongroup>
+        <Buttongroup><MakeButtons Kategoriat={this.state.Kategoriat} data={this.state.ChooseGenre} handleOnClick={this.saveName}/></Buttongroup>
             <h2>Pelaaja - {this.laskuri()} Biisi - {this.state.otsikko}</h2>
             <br></br>
             <center><F esittäjä={this.state.esittäjä} kappale={this.state.kappale} biisinnumero={this.state.otsikko} pelaajat={this.state.Pelaajat1} /><p></p></center>

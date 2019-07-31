@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import axios from 'axios';
 
 class F extends React.Component {
@@ -8,23 +8,9 @@ class F extends React.Component {
       biisi1: [],
     }
 }
-/*
-async wait = (props) => {
-
-  let promise = new Promise((resolve, reject) => {
-    if (props.esittäjä + props.kappale > 0) {
-      console.log ("nyt on!");
-    }
-  });
-
-  let result = await promise;
-
-  resolve({promise});
-wait();
-*/
 
 fetchaus = (props) => {
-  let result;
+  
   let i = props.biisinnumero;
   let value = props.esittäjä[i] + "+" + props.kappale[i];
   //API_KEY:n kohdalle tarvitaan Youtubeapin key, jotta kappaleita voidaan hakea Youtubesta. 
@@ -43,8 +29,6 @@ fetchaus = (props) => {
                 }
               });
            })
-           .catch(err => { result = err;}
-           );
            
 }
 // Päivitetään komponentti jolloin seuraava kappale lähtee soimaan. 

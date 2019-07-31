@@ -32,9 +32,9 @@ for (s = 0; s < props.Kategoriat.length; s++) {
 return array;
 };
 
-
+//tarvitaan Last.FM api key kohtaan "const rest= '&api_key= "
 const API_URL = 'http://ws.audioscrobbler.com/2.0/';
-const rest = '&api_key=35d3a46b16e0113dd4437ac6deef84b2&format=json';
+const rest = '&api_key=&format=json';
 
 //haetaan kappaleita valitun genren mukaan. Palauttaa 50 suosituinta genren kappaletta last.fm palvelusta. 
 export function GetSongs(ans, Pelaajat) {
@@ -62,7 +62,7 @@ export function GetSongs(ans, Pelaajat) {
     let biisit = [];
     let laulajat = [];
     let g;
-    //laitetaan arvotut kappaleet arrayhin ja siirretään ne app.jssaan. Lopuksi löytyvät app.jssan statesta kohdasta esittäjä ja kappale. 
+    //laitetaan arvotut kappaleet arrayhin ja siirretään ne app.jssaan. Sieltä ne löytyvät app.jssan statesta kohdasta esittäjä ja kappale. 
     for (g = 0; g <= 5 * kerroin; g++) {
       biisit.push(kappale[randomnumero[g]]);
       laulajat.push(esittäjä[randomnumero[g]]);
