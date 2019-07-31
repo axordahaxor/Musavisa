@@ -1,8 +1,8 @@
 Huomioita:
 --------------------------------------------
 - Buutcamp Trainee -ohjelman referenssiprojekti.
-- Peli tarvitsee Youtube api V3 keyn toimiakseen. Se tulee lisätä koodiin Questions.js tiedostossa. 
-- Peli tarvitsee myös Last.FM -palvelun api keyn. Se tulee lisätä merkittyyn kohtaan ChooseGenre.js tiedostossa. 
+- Peli tarvitsee Youtube api V3 keyn toimiakseen. Se tulee lisätä kommentilla merkittyyn kohtaan Questions.js tiedostossa. 
+- Peli tarvitsee myös Last.FM -palvelun api keyn. Se tulee lisätä kommentilla merkittyyn kohtaan ChooseGenre.js tiedostossa. 
 - Pelissä näkyy Youtuben video, mikä heikentää pelikokemusta. Videon piilotukseen on olemassa erilaisia vaihtoehtoja, mutta luultavasti Youtuben käyttöehdot kieltävät piilotuksen. Siksi oletuksena video näkyy, vaikka teknisesti videon piilotus ei vaikeaa olekaan. 
 - Pistelaskua ei ole kehitetty. 
 
