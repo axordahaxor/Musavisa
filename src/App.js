@@ -125,7 +125,7 @@ class App extends React.Component {
         <br></br>
         <Buttongroup><ChooseGamers handleOnClick={this.Pelurit}/> </Buttongroup>
         <Buttongroup><MakeButtons Kategoriat={this.state.Kategoriat} data={this.state.ChooseGenre} handleOnClick={this.saveName}/></Buttongroup>
-            <h2>Pelaaja - {this.laskuri()} Biisi - {this.state.otsikko}</h2>
+            <h2> Biisi - {this.state.otsikko}</h2>
             <br></br>
             <center><F esittäjä={this.state.esittäjä} kappale={this.state.kappale} biisinnumero={this.state.otsikko} pelaajat={this.state.Pelaajat1} /><p></p></center>
             <p> Esittäjä:
